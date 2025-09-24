@@ -22,7 +22,7 @@
       }
 
       // メソッドを定義する
-      public function show_price(int $price) {
+      public function show_price() {
         echo $this->price . '<br>';
       }
     }
@@ -32,6 +32,7 @@
 
     // インスタンス$foodの各プロパティの値を出力する
     print_r($food);
+    echo '<br>';
 
    
     class Animal {
@@ -47,7 +48,7 @@
       }
 
       // メソッドを定義する
-      public function show_height(int $height) {
+      public function show_height() {
         echo $this->height . '<br>';
       }
     }
@@ -56,6 +57,7 @@
     $animal = new Animal('dog', 60, 5000);
     // インスタンス$Animalの各プロパティを出力する
     print_r($animal);
+    echo '<br>';
 
     // プロパティにアクセスし、値を出力する
     $food->show_price();
@@ -66,3 +68,4 @@
 </body>
 
 </html>
+
