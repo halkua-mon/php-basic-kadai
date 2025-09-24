@@ -8,7 +8,7 @@
 
 <body>
   <p>
-    <?php
+   <?php
     // クラスを定義する
     class Food {
       // プロパティを定義する
@@ -19,6 +19,11 @@
       public function __construct(string $name, int $price) {
         $this->name = $name;
         $this->price = $price;
+      }
+
+      // メソッドを定義する
+      public function show_price(int $price) {
+        echo $this->price . '<br>';
       }
     }
 
@@ -40,18 +45,24 @@
         $this->height = $height;
         $this->weight = $weight;
       }
+
+      // メソッドを定義する
+      public function show_height(int $height) {
+        echo $this->height . '<br>';
+      }
     }
 
     // インスタンス化
-    $Animal = new Animal('dog', 60, 5000);
+    $animal = new Animal('dog', 60, 5000);
     // インスタンス$Animalの各プロパティを出力する
-    print_r($Animal);
+    print_r($animal);
 
     // プロパティにアクセスし、値を出力する
-    echo $food->price;
-    echo $Animal->height;
+    $food->show_price();
+    $animal->show_height();
 
     ?>
    </p>
 </body>
+
 </html>
